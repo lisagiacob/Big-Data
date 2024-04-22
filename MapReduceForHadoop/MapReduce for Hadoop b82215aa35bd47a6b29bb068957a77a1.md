@@ -6,7 +6,7 @@ HDFS (Hadoop Distributed File System) is an high avaiability distributed storage
 
 Each file is split in chunks that are spread across the servers. Each chunck is  replicated on different servers to manage failures and to always be able to parallelize the memory accesses. 
 
-![Screenshot 2023-10-23 alle 20.18.28.png](MapReduce%20for%20Hadoop%20b82215aa35bd47a6b29bb068957a77a1/Screenshot_2023-10-23_alle_20.18.28.png)
+![Screenshot 2023-10-23 alle 20.18.28.png](Files/Screenshot_2023-10-23_alle_20.18.28.png)
 
 The Name Nodes in HDFS are special nodes/servers that store HDFS metadata and might be replicated. To access a file through HDFS APIs one should talk to the name node to find the chunk servers associated with the file of interest and then connect to it.
 

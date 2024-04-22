@@ -25,7 +25,7 @@ The Map function is applied over each element of an input data set and emits a s
 
 Ther Reduce function is applied over each set of (key, value) pairs with the same key and emits a new set of (key, value) pairs that represent the final result.
 
-![Screenshot 2023-10-23 alle 20.32.30.png](MapReduce%20for%20Hadoop%20b82215aa35bd47a6b29bb068957a77a1/Screenshot_2023-10-23_alle_20.32.30.png)
+![Screenshot 2023-10-23 alle 20.32.30.png](Files/Screenshot_2023-10-23_alle_20.32.30.png)
 
 The map phase can be viewed as a transformation over each element of a set.
 This transformation is a function m defined by developers and invoked one time for each input element in isolation.
@@ -49,7 +49,7 @@ The number of reducers is set by the programmer, each reducer is associated with
 
 Each part is implemented by means of a specific class
 
-![Screenshot 2023-10-23 alle 21.28.19.png](MapReduce%20for%20Hadoop%20b82215aa35bd47a6b29bb068957a77a1/Screenshot_2023-10-23_alle_21.28.19.png)
+![Screenshot 2023-10-23 alle 21.28.19.png](Files/Screenshot_2023-10-23_alle_21.28.19.png)
 
 Hadoop has it’s own basic data types:
 
@@ -67,7 +67,7 @@ The input of the MapReduce program is an HDFS file. The classes extending the In
 
 InputFormat “describes” the input-format specification for a MapReduce application and processes the input file. The InputFormat class is used to read the input data and validate its compliance with the input format expected, to split the input file into logical input splits and to provide the RecordReader implementation to be used to divide the logical input split in a set of (key, value) pairs for the mappers.
 
-![Screenshot 2023-10-23 alle 21.47.17.png](MapReduce%20for%20Hadoop%20b82215aa35bd47a6b29bb068957a77a1/Screenshot_2023-10-23_alle_21.47.17.png)
+![Screenshot 2023-10-23 alle 21.47.17.png](Files/Screenshot_2023-10-23_alle_21.47.17.png)
 
 TextInputFormat is an InputFormat for plain text files, where files are broken into lines and a (key, value) pair is emitted for each line, where the key is the offset of the line, and the value is the content of the line.
 
@@ -84,9 +84,9 @@ Combiners, aka mini-reducers, perform some pre-aggregations to limit the amount 
 
 Combiners reduce the amount of data sent on the network.
 
-![Screenshot 2023-10-23 alle 21.58.48.png](MapReduce%20for%20Hadoop%20b82215aa35bd47a6b29bb068957a77a1/Screenshot_2023-10-23_alle_21.58.48.png)
+![Screenshot 2023-10-23 alle 21.58.48.png](Files/Screenshot_2023-10-23_alle_21.58.48.png)
 
-![Screenshot 2023-10-23 alle 21.58.44.png](MapReduce%20for%20Hadoop%20b82215aa35bd47a6b29bb068957a77a1/Screenshot_2023-10-23_alle_21.58.44.png)
+![Screenshot 2023-10-23 alle 21.58.44.png](Files/Screenshot_2023-10-23_alle_21.58.44.png)
 
 The (key, value) pairs emitted by the Mappers are analyzed in the main-memory (or on the local disk) and aggregated by the Combiners. Each Combiner pre-aggregates the values associated with the pairs emitted by the Mappers of a cluster node. 
 
